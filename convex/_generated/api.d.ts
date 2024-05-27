@@ -16,8 +16,15 @@ import type {
 } from "convex/server";
 import type * as auth from "../auth.js";
 import type * as authAdapter from "../authAdapter.js";
+import type * as categories from "../categories.js";
+import type * as gig from "../gig.js";
+import type * as gigMedia from "../gigMedia.js";
 import type * as http from "../http.js";
 import type * as myFunctions from "../myFunctions.js";
+import type * as offers from "../offers.js";
+import type * as profileImage from "../profileImage.js";
+import type * as stripe from "../stripe.js";
+import type * as users from "../users.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -30,8 +37,15 @@ import type * as myFunctions from "../myFunctions.js";
 declare const fullApi: ApiFromModules<{
   auth: typeof auth;
   authAdapter: typeof authAdapter;
+  categories: typeof categories;
+  gig: typeof gig;
+  gigMedia: typeof gigMedia;
   http: typeof http;
   myFunctions: typeof myFunctions;
+  offers: typeof offers;
+  profileImage: typeof profileImage;
+  stripe: typeof stripe;
+  users: typeof users;
 }>;
 export declare const api: FilterApi<
   typeof fullApi,

@@ -9,6 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { SignIn, SignOut } from "./auth-components";
+import Link from "next/link";
 
 export default async function UserButton() {
   const session = await auth();
@@ -43,6 +44,12 @@ export default async function UserButton() {
               </p>
             </div>
           </DropdownMenuLabel>
+          <DropdownMenuItem>
+            <Link href={`/seller/${session.user.email}/manage-gigs/create`}>
+              Create gig
+            </Link>
+          </DropdownMenuItem>
+
           <DropdownMenuItem>
             <SignOut />
           </DropdownMenuItem>

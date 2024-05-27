@@ -6,6 +6,7 @@ import "./globals.css";
 import ConvexClientProvider from "@/app/ConvexClientProvider";
 import { auth, signOut } from "@/auth";
 import { Navbar } from "./_components/Navbar";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default async function RootLayout({
         <ConvexClientProvider session={session}>
           <Navbar />
           {children}
+          <Toaster />
         </ConvexClientProvider>
       </body>
     </html>
